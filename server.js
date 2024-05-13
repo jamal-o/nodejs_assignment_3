@@ -36,10 +36,13 @@ function deleteJoke(id) {
 
         return JSON.stringify(deletedJoke);
     }else{
+        return "invalid_joke";
 
     }
 
 }
+
+
 function requestHandler(req, res) {
   res.setHeader("Content-type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -80,7 +83,16 @@ function requestHandler(req, res) {
         let id = pathName.split("/")[2];
         
         let deletedJoke = deleteJoke(id);
+
+        if (deletedJoke === "invalid_joke") {
+            res.setHeader("StatusCode", 300);
+            res.end(`{"message": "there is no joke with that ID"}`);
+        }else{
+
+        res.setHeader("StatusCode", "400");
         res.end(deletedJoke);
+        }
+
     }
   }
 }
