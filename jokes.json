@@ -1,0 +1,23 @@
+[
+    {
+      "title": "The Chicken",
+      "comedian": "Louis C.K.",
+      "year": "2008",
+      "id": "001",
+      "joke": "Why did the chicken cross the road? To get to the other side!"
+    },
+    {
+      "title": "The Lawyer Joke",
+      "comedian": "Jerry Seinfeld",
+      "year": "1995",
+      "id": "002",
+      "joke": "Why don't lawyers go to the beach? Cats keep trying to bury them in the sand!"
+    },
+    {
+      "title": "The Doctor Joke",
+      "comedian": "Ellen DeGeneres",
+      "year": "2011",
+      "id": "003",
+      "joke": "Why did the doctor carry a red pen? In case they needed to draw blood!"
+    }
+  ]
