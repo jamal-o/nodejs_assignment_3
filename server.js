@@ -6,7 +6,7 @@ const url = require("url");
 function getHandler(req, res) {
     //return all jokes to user
 
-    let db = fs.readFile("jokes.json", {"encoding": "utf-8"});
+    let db = fs.readFileSync("jokes.json", {"encoding": "utf-8"});
     res.writeHead(200);
     res.end(db);
 }
@@ -26,6 +26,8 @@ function requestHandler(req, res) {
   res.setHeader("Content-type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
 
+
+    //handle home route
   if (req.url === "/") {
     switch (req.method) {
       case "GET":
